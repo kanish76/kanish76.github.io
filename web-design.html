@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Portfolio - Kanish</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="minimal_style.css"> </head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1><a href="index.html">Kanish</a> / Web Design</h1>
+        </div>
+    </header>
+
+    <nav class="main-nav"> <div class="container">
+            <ul>
+                 <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="video.html">Video Editing</a></li>
+                <li><a href="web-design.html" class="active">Web Design</a></li>
+                <li><a href="it-projects.html">IT Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="page-title">
+            <h2>My Web Design Projects</h2>
+            <p>A collection of websites I've designed and developed.</p>
+        </section>
+
+        <section class="project-grid">
+            <div class="project-item">
+                <img src="images/web-project1-thumb.jpg" alt="Project 1 Thumbnail">
+                <h3>Client Project A</h3>
+                <p>A responsive e-commerce site for a local artisan.</p>
+                <a href="link-to-live-site-or-detail-page1.html" target="_blank" class="btn-secondary">View Project</a>
+            </div>
+
+            <div class="project-item">
+                <img src="images/web-project2-thumb.jpg" alt="Project 2 Thumbnail">
+                <h3>Personal Portfolio Site</h3>
+                <p>My previous portfolio iteration, focusing on CSS animations.</p>
+                <a href="link-to-live-site-or-detail-page2.html" target="_blank" class="btn-secondary">View Project</a>
+            </div>
+
+            </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Kanish. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

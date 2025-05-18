@@ -1,0 +1,212 @@
+/* minimal_style.css */
+
+/* Basic Reset & Body */
+* {
+    box-sizing: border-box; /* Makes layout easier */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Default font */
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light grey background */
+    color: #333; /* Dark grey text */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures footer stays at bottom */
+}
+
+.container {
+    width: 85%; /* Content width */
+    max-width: 1100px; /* Max content width */
+    margin: auto; /* Centers the content */
+    padding: 0 20px; /* Some space on the sides */
+}
+
+/* Header */
+.main-header {
+    background-color: #fff; /* White header */
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.main-header h1 {
+    font-family: 'Montserrat', sans-serif; /* Different font for main title */
+    font-size: 2.5em;
+    color: #222;
+    margin-bottom: 5px;
+}
+.main-header h1 a { /* If Kanish is a link back to home */
+    text-decoration: none;
+    color: #222;
+}
+
+.main-header .tagline {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Navigation */
+.main-nav {
+    background-color: #333; /* Dark nav bar */
+    padding: 10px 0;
+    position: sticky; /* Makes the nav bar stick to the top when you scroll */
+    top: 0;
+    z-index: 1000; /* Ensures it's above other content */
+}
+
+.main-nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+.main-nav ul li {
+    display: inline-block; /* Puts links in a row */
+    margin: 0 15px;
+}
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease; /* For hover effect */
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active { /* Style for active page link */
+    color: #333;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+}
+
+
+/* Main Content Sections */
+main.container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    flex-grow: 1; /* Allows main content to expand and push footer down */
+}
+
+.intro-section, .portfolio-category-preview, .page-title {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.intro-section h2, .portfolio-category-preview h3, .page-title h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Buttons */
+.btn, .btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn {
+    background-color: #5cb85c; /* Example green accent */
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #4cae4c;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.btn-secondary {
+    background-color: #337ab7; /* Example blue accent */
+    color: #fff;
+}
+.btn-secondary:hover {
+    background-color: #286090;
+    transform: translateY(-2px);
+}
+
+/* Project Grid (for category pages) */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid! */
+    gap: 25px; /* Space between items */
+    margin-top: 30px;
+}
+
+.project-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.project-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    aspect-ratio: 16/9; /* Or your preferred aspect ratio for thumbnails */
+    object-fit: cover; /* Ensures image covers the space without distortion */
+}
+
+.project-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.project-item p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 15px;
+    min-height: 50px; /* Give some consistent space for description */
+}
+
+
+/* Footer */
+.main-footer {
+    background-color: #2c3e50; /* Darker footer */
+    color: #ecf0f1; /* Light text for footer */
+    text-align: center;
+    padding: 25px 0;
+    margin-top: auto; /* Pushes footer to bottom if content is short */
+}
+.main-footer p {
+    font-size: 0.9em;
+}
+
+/* Basic Interactivity - (already included in some elements like buttons, project-items) */
+/* You can add more specific transitions or hover effects as needed */
+
+/* Responsive adjustments - simple example */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 2em;
+    }
+    .main-nav ul li {
+        display: block; /* Stack nav items on small screens */
+        margin: 10px 0;
+    }
+    .project-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+}

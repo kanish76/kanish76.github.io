@@ -1,14 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Awesome Portfolio!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanish - Creative Portfolio</title> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="minimal_style.css"> </head>
 <body>
-    <h1>Hello, World! I'm [KANISH]!</h1>
-    <p>Welcome to my very first website!</p>
-    <p>I'm learning to code and it's super fun.</p>
-    <p>You can see my cool projects here (soon!).</p>
-    <a href="https://github.com/[kanish86]">Visit my GitHub Profile!</a>
+    <header class="main-header">
+        <div class="container">
+            <h1>Kanish</h1>
+            <p class="tagline">Exploring Creativity in Code, Design, Video & Gastronomy</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#recipes-intro">Recipes</a></li>
+                <li><a href="#video-intro">Video Editing</a></li>
+                <li><a href="#web-design-intro">Web Design</a></li>
+                <li><a href="#it-projects-intro">IT Projects</a></li>
+                <li><a href="contact.html">Contact</a></li> </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="intro" class="intro-section">
+            <h2>Welcome!</h2>
+            <p>I'm passionate about bringing ideas to life, whether it's through delicious recipes, engaging videos, intuitive web designs, or robust IT solutions. Explore my work below.</p>
+        </section>
+
+        <section id="recipes-intro" class="portfolio-category-preview">
+            <h3>Delicious Recipes</h3>
+            <p>From comforting classics to new experiments. My culinary journey.</p>
+            <a href="recipes.html" class="btn">View Recipes</a>
+        </section>
+
+        <section id="video-intro" class="portfolio-category-preview">
+            <h3>Engaging Video Edits</h3>
+            <p>Storytelling through motion and sound. See my latest edits.</p>
+            <a href="video.html" class="btn">View Video Portfolio</a>
+        </section>
+
+        <section id="web-design-intro" class="portfolio-category-preview">
+            <h3>Creative Web Designs</h3>
+            <p>Building user-friendly and visually appealing web experiences.</p>
+            <a href="web-design.html" class="btn">View Web Designs</a>
+        </section>
+
+        <section id="it-projects-intro" class="portfolio-category-preview">
+            <h3>Innovative IT Projects</h3>
+            <p>Solving problems with technology. Explore my IT case studies.</p>
+            <a href="it-projects.html" class="btn">View IT Projects</a>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Kanish. All rights reserved.</p>
+            </div>
+    </footer>
+
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
