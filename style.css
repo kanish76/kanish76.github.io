@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif; /* This is a nice, simple font */
+    background-color: lightblue;    /* Let's make the background light blue! */
+    text-align: center;             /* Put all our text in the center */
+    margin-top: 50px;               /* Add some space at the top */
+}
+
+h1 {
+    color: navy;                    /* Make our main title navy blue */
+}
+
+p {
+    color: #333333;                 /* A nice dark gray for paragraphs */
+    font-size: 18px;                /* Make the text a bit bigger */
+}
+
+a {
+    color: green;                   /* Make links green */
+    text-decoration: none;          /* No ugly underline on links */
+    font-weight: bold;
+}
+
+a:hover {
+    color: darkgreen;               /* Make the link darker when you hover your mouse over it */
+}
